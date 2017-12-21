@@ -14,7 +14,8 @@
 \ecvpictureleft{}
 
 \newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
-\newcommand{\BsToMuMu}{B_{s}^{0}\rightarrow\mu^{+}\mu^{-}}
+\newcommand{\Bs}{B_{s}^{0}}
+\newcommand{\BsToMuMu}{\Bs\rightarrow\mu^{+}\mu^{-}}
 \newcommand{\Jpsi}{J/\psi}
 \newcommand{\PsiSS}{\psi(2S)}
 
@@ -31,54 +32,72 @@
 	\ecvtitle{from 2015/10 to today}{Software developer / designer}
 	\ecvitem{}{Cynny S.P.A.}	
 	\ecvitem{}{\CC~and JavaScript software developer/designer for the Cynny infrastructure.
-Specifically, I've been working on the development and implementation of:
+
+	Specifically, I've been working on the development and implementation of:
 	\begin{ecvitemize}
-\item the Morphcast technology running in-browser. It is the main Cynny product. A single-page web app, developed fully in javascript ES2015. The most important third-party JS libraries used to develop it comprehend Webpack for the bundling, Karma+Jasmine for the test-driven development and Vue.js for the front-end part.
-\item Morphcast creator: a desktop app written in \CC~and Qt/QML, to demonstrate the possibility for clients to create Morphcast videos. It used the Cynny SDK (see below).
-\item Cynet: a Chord protocol for a P2P-distributed hash table on the Cynny servers, implemented as a \CC~plugin for Node.js, written with libuv and Chrome V8. Its plan was to reliably serve, update and duplicate data, in an environment where many connected nodes could go frequently down. The \CC/JS code was written using also CMake, Valgrind (since memory consumption was critical), SQLite for the database management, and Google tests and Mocha (for the unit tests).
-\item Giotto: an SDK for the Cynny mobile and desktop apps (in \CC11). It is the common library all Cynny apps use to communicate with the Cynny servers. This multithreading synchronization middleware was developed using also third-party libraries like CMake, SQLite (for the synchronized internal databse), Djinni (for the interface bindings with Objective-C and Java), and Catch as the testing suite.
+		\item the Morphcast technology running in-browser. It is the main Cynny product. A single-page web app, fully developed in javascript ES2015. The most important third-party JS libraries used to develop it comprehend Webpack for the bundling, Karma+Jasmine for the test-driven development and Vue.js for the front-end part.
+		\item Morphcast creator: a desktop app written in \CC~and Qt/QML, to demonstrate the possibility for clients to create Morphcast videos. It used the Cynny Giotto SDK (see below).
+		\item Cynet: a Chord protocol for a P2P-distributed hash table on the Cynny servers, implemented as a \CC~plugin for Node.js, written with libuv and Chrome V8. Its plan was to reliably serve, update and duplicate data, in an environment where many connected nodes could go frequently down. The \CC/JS code was written using also CMake, Valgrind (since memory consumption was critical), SQLite for the database management, and Google tests and Mocha for the unit tests.
+		\item Giotto: an SDK for the Cynny mobile and desktop apps (in \CC11). It is the common library all Cynny apps use to communicate with the Cynny servers. This multithreading synchronization middleware was developed using also third-party libraries like CMake, SQLite (for the synchronized internal databse), Djinni (for the interface bindings with Objective-C and Android), and Catch as the testing suite.
 	\end{ecvitemize}
 	}	
 	\ecvitem{}{\ecvhighlight{Sectors:} \CC~and JavaScript Software Developing and Design}	
 
 	\ecvtitle{from 2014/12 to 2015/10}{Post doc.~on experimental physics}
-	\ecvitem{}{University of Pisa \& INFN}	
-	\ecvitem{}{During this period I spent my time mainly in the following activities:
+	\ecvitem{}{University of Pisa \& INFN Pisa}	
+	\ecvitem{}{Post doc.~on the development of an algorithm for the reconstruction of tracks at the first trigger level in CMS at HL-LHC (CERN)
+
+	During this period I spent my time mainly in the following activities:
 	\begin{ecvitemize}
-\item Statistical analyses of the LHC collisions (with software written in \CC), and consequent publication of experimental physics papers
-\item R\&D on a fast tracking detector for the next generation of LHC (also this in \CC)
-\item Teaching assistant in a master physics course
-\item Person in charge of part of the CMS software triggers (those relative to the CMS heavy-flavour programme)
+		\item Statistical analyses of the LHC collisions (with software written in \CC), and consequent publication of experimental physics papers
+		\item R\&D on a fast tracking detector for the next generation of LHC (also this in \CC)
+		\item Teaching assistant in a master physics course
+		\item Person in charge of part of the CMS software triggers (those relative to the CMS heavy-flavour programme)
 	\end{ecvitemize}
-The statistical analyses were performed mainly using the CERN \CC ROOT library.}		
+	The statistical analyses were performed mainly using the CERN \CC ROOT library.}		
 	\ecvitem{}{\ecvhighlight{Sectors:} High Energy Physics, \CC~Software Developing, Data Analysis, Group Leadership}
 
 	\ecvtitle{from 2012/12 to 2014/12}{Post doc.~on experimental physics}
-	\ecvitem{}{University of Pisa \& INFN}	
-	\ecvitem{}{Postdoc on L1 trigger software and hardware development for High Luminosity-LHC for the CMS experiment at CERN (CH).
-	During this period I continued my activity in the heavy-flavour studies group. The most important result obtained was the publication of the results for the $\BsToMuMu$ decay with the combined analyses of the CMS and LHCb data (\url{https://cds.cern.ch/record/1970675}). This paper was also recently celebrated on the CMS homepage.
+	\ecvitem{}{University of Pisa \& INFN Pisa}	
+	\ecvitem{}{Post doc.~on L1 trigger software and hardware development for High Luminosity-LHC for the CMS experiment at CERN (CH).
 
-The software analyses were performed in \CC, mainly using the CERN ROOT statistical framework.}		
+	During this period I continued my activity in the heavy-flavour studies group.
+		\begin{ecvitemize}
+		\item The most important result obtained was the publication of the observation of the $\BsToMuMu$ decay with the combined analyses of the CMS and LHCb data (\url{https://cds.cern.ch/record/1970675}). 
+	The different datasets were combined using an unbinned likelihood that was taking into account the correlated parameters. 
+	This paper was also recently celebrated on the CMS homepage.
+	\item In the second year I started the study of the feasibility of a L1 (hardware) track trigger for HL-LHC.
+	\end{ecvitemize}
+	The statistical analyses were performed using Monte Carlo methods to infer efficiency estimates and their statistic and systematic uncertainties.
+
+	The software was written in \CC, mainly using the CERN ROOT statistical framework.}		
 	\ecvitem{}{\ecvhighlight{Sectors:} High Energy Physics, \CC~Software Developing, Data Analysis, Group Leadership}
 
 	\ecvtitle{from 2009/09 to 2012/12}{Ph.D.~on experimental physics}
-	\ecvitem{}{University of Siena \& INFN}	
+	\ecvitem{}{University of Siena \& INFN Pisa}	
 	\ecvitem{}{Ph.D. student at the CMS experiment at CERN.
-My work contributed to the publication of the first measurements of the $\Jpsi$ and $\PsiSS$ meson production cross-sections at 7 and 8~TeV, and also to the first observation of the rare decay $\BsToMuMu$.
-The observation of the latter is the main topic of my Ph.D. thesis.
 
-During the first half of 2011 I was responsible of the research and development of the Heavy Flavor Physics triggers of CMS.}		
+	My work contributed to the publication of the first measurements of the $\Jpsi$ and $\PsiSS$ meson production cross-sections at 7 and 8~TeV of energy, and also to the first observation of the rare decay $\BsToMuMu$.
+	The observation of the latter is the main topic of my Ph.D.~thesis.
+	Monte Carlo methods were used to extract the detector efficiencies. 
+	Statistical and systematic uncertainties were taken into account for the theoretical and experimental parameters.
+	The final selection was optimized through a multivariate analysis, using a boosted decision tree algorithm.
+	The extraction of the $\Bs$ signal was performed with an unbinned maximum likelihood fit, that was taking into account correlation of the many parameters and their uncertainty.
+	The statistical significance against the null hypothesis was extracted through the likelihood ratio.
+
+	During the first half of 2011 I was also responsible of the research and development of the heavy-flavour physics triggers of CMS.}		
 	\ecvitem{}{\ecvhighlight{Sectors:} High Energy Physics, \CC~Software Developing, Data Analysis}
 
 	\ecvtitle{from 2011/01 to 2011/12}{CERN associate}
-	\ecvitem{}{CERN \& INFN}	
+	\ecvitem{}{CERN \& INFN Pisa}	
 	\ecvitem{}{Associate position at CERN, CH.
-During this 1-year position I spent most of the time making analyses for the heavy-flavour group of the CMS collaboration.
-Besides the publication of the $\Jpsi$ and $\PsiSS$ cross-section measurements, I started to study the feasibility of a measurement of the $\BsToMuMu$ decay using the first-year CMS data.
 
-I also was part of the analyzers of the triggers (the selection of the collision data on-the-fly) for the heavy-flavour CMS group.
+	During this 1-year position I spent most of the time making analyses for the heavy-flavour group of the CMS collaboration.
+	Besides the publication of the $\Jpsi$ and $\PsiSS$ cross-sections, I started to study the feasibility of a measurement of the $\BsToMuMu$ rare decay using the first-year CMS data.
 
-The software analyses were performed mainly in \CC and using the CERN ROOT statistical library.}		
+	I also was part of the analysts of the triggers (the selection of the collision data on-the-fly) for the heavy-flavour group.
+
+	The software analyses were performed mainly in \CC and using the CERN ROOT statistical library.}		
 	\ecvitem{}{\ecvhighlight{Sectors:} High Energy Physics, \CC~Software Developing, Data Analysis}
 
 	\ecvsection{Education and Training}
@@ -112,23 +131,23 @@ The software analyses were performed mainly in \CC and using the CERN ROOT stati
 
 	\ecvitem{\textcolor{ecvsectioncolor}{Organizational / managerial skills}}{
 		\begin{ecvitemize}
-			\item Sense of organization and team work, acquired during my job experiences
-			\item Leadership, having been responsible of teams of up to ten people
+			\item Sense of organization and team work
+			\item Leadership, having been responsible of teams of up to about ten people
 		\end{ecvitemize}
 	}
 
-	\ecvitem{\textcolor{ecvsectioncolor}{Computer skills}}{
-		\begin{ecvitemize}
-			\item Excellent knowledge (more than seven years) of \CC11, including multithreading
-			\item Excellent knowledge (more than two years) of JavaScript including some of its main client and server-side frameworks (see Work Experience above)
-		\end{ecvitemize}
-	}
+	% \ecvitem{\textcolor{ecvsectioncolor}{Computer skills}}{
+	% 	\begin{ecvitemize}
+	% 		\item Excellent knowledge (more than seven years) of \CC11, including multithreading
+	% 		\item Excellent knowledge (more than two years) of JavaScript including some of its main client and server-side frameworks (see Work Experience above)
+	% 	\end{ecvitemize}
+	% }
 
 	\ecvitem{\textcolor{ecvsectioncolor}{Job-related skills}}{
 		\begin{ecvitemize}
-			\item Abstraction and mathematization of problems
-			\item Statistical analysis
-			\item Software developing and design
+			\item Problem modeling
+			\item Statistical analysis, Monte Carlo methods, likelihood fits, multivariate analyses
+			\item Software development and design, \CC~(8 years) and JavaScript~(2 years) languages, main software patterns, Test-Driven Development
 		\end{ecvitemize}
 	}
 
@@ -149,19 +168,19 @@ The software analyses were performed mainly in \CC and using the CERN ROOT stati
 	\ecvitem{\textcolor{ecvsectioncolor}{Publications}}{
 		\begin{ecvitemize}
 			\item Co-author in the CMS collaboration (more than 300 published physics papers)
-			\item Single author of four High Energy Physics papers
+			\item Single author of 4 High Energy Physics papers
 		\end{ecvitemize}
 	}
 
 	\ecvitem{\textcolor{ecvsectioncolor}{Conferences}}{
 		\begin{ecvitemize}
-			\item Speaker in seven international Physics conferences
+			\item Speaker in 7 international physics conferences
 		\end{ecvitemize}
 	}	
 
 	\ecvitem{\textcolor{ecvsectioncolor}{Honours and awards}}{
 		\begin{ecvitemize}
-			\item 2014 Conversi award for best High Energy Physics Ph.D.~thesis, by INFN
+			\item Conversi award for the 2014 best high energy physics Ph.D.~thesis, by INFN
 		\end{ecvitemize}
 	}
 
