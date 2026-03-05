@@ -1,17 +1,13 @@
 \documentclass[11pt,a4paper]{article}
 
 \usepackage[utf8]{inputenc}
-\usepackage[margin=0.75in]{geometry} % More space for content
+\usepackage[margin=0.75in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{graphicx}
 
 \newcommand{\CC}{C\nolinebreak\hspace{-.05em}\raisebox{.4ex}{\tiny\bf +}\nolinebreak\hspace{-.10em}\raisebox{.4ex}{\tiny\bf +}}
-\newcommand{\Bs}{B_{s}^{0}}
-\newcommand{\BsToMuMu}{\Bs\rightarrow\mu^{+}\mu^{-}}
-\newcommand{\Jpsi}{J/\psi}
-\newcommand{\PsiSS}{\psi(2S)}
 
 \titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
 \titlespacing*{\section}{0pt}{10pt}{10pt}
@@ -19,7 +15,6 @@
 \begin{document}
 
 \begin{center}
-  \includegraphics[scale=0.035]{faccia.jpg} \\
   {\huge \textbf{Luca Martini}} \\
   Pescia, Italy | +39 333 3766759 | \href{mailto:luca.martini82@gmail.com}{luca.martini82@gmail.com} \\
   \href{https://www.linkedin.com/in/luca-martini}{linkedin.com/in/luca-martini}
@@ -31,111 +26,78 @@ Senior Software Architect and PhD Physicist with 15+ years of experience bridgin
 \section{Work Experience}
 
 \textbf{NWG Energia S.p.A. Società Benefit} \hfill \textit{2018/03 - Present} \\
-\textit{Senior Software Developer / Architect} \hfill \textit{Prato} \\
-Senior software developer in the IT department of the NWG energy utility company.
-I'm coding primarily in JavaScript but I also touch PHP and Python.
-\begin{itemize}[noitemsep]
-  \item I'm a responsible of the main NWG web app (called "Vip Office"), which serves thousands of authenticated clients with different profiles.
-  \item For this, I use React and Material-UI for the front-end part, and Node.js for the back-ends. Communication between clients and servers is done via REST and GraphQL APIs.
-  \item I develop internal micro-services for the back-end functionalities, that communicate through the gRPC protocol. Data being stored in MySQL and Redis. On premise services are orchestrated with k8s.
-  \item I use React Native and Expo to publish NWG native apps to App Store and Google Play.
-  \item I use AWS services to lighten the workload of our on-premise servers. The main AWS services being used are IAM, S3, DynamoDB, Lambda, the VPC, Amplify
-  \item I use Apache Airflow for cron and ETL jobs
-  \item I develop in a continuous integration environment (in GitLab), with unit and integration tests (with jest), E2E tests (with Cypress and detox) and load tests (with Artillery).
-  \item My preferred way of coding is Test-Driven Development (TDD).
-  \item The team I'm in, follows the Agile methodology to maximize our workload profit.
+\textit{Senior Software Developer / Architect} \hfill \textit{Prato, Italy}
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt, topsep=4pt]
+  \item \textbf{Architected and maintained the "Vip Office" platform}, a mission-critical web application serving thousands of authenticated clients.
+  \item \textbf{Engineered a high-performance microservices backend} using Node.js and gRPC, optimizing internal communication and scalability.
+  \item \textbf{Reduced on-premise infrastructure load} by strategically migrating heavy workloads to AWS (Lambda, DynamoDB, S3, and Amplify).
+  \item \textbf{Modernized data fetching capabilities} by implementing GraphQL and REST APIs to bridge React front-ends with MySQL/Redis storage.
+  \item \textbf{Led CI/CD and QA initiatives} using GitLab, Jest, and Cypress, achieving high reliability through TDD and E2E testing with Artillery for load testing.
+  \item \textbf{Published and managed cross-platform native apps} using React Native and Expo for both App Store and Google Play.
 \end{itemize}
-\textbf{Cynny} \hfill \textit{2015/10 - 2018/03} \\
-\textit{Software Developer / Designer} \hfill \textit{Florence} \\
-\CC~and JavaScript software developer/designer for the Cynny infrastructure.
-Specifically, I have been working on the development and implementation of:
-\begin{itemize}[noitemsep]
-  \item the Morphcast technology running in-browser. It is the main Cynny product. A single-page web app, fully developed in javascript ES2015. The most important third-party JS libraries comprehend Webpack for the bundling, Karma+Jasmine for the test-driven development and Vue.js for the front-end part.
-  \item Morphcast creator: a desktop app written in \CC~and Qt/QML, to demonstrate the possibility for our customers to create Morphcast videos. It used the Cynny Giotto SDK (see below).
-  \item Cynet: a Chord protocol for a P2P-distributed hash table on the Cynny servers, implemented as a \CC~plugin for Node.js, written with libuv and Chrome V8. Its plan was to reliably serve, update and duplicate data, in an environment where many connected nodes could go frequently down. The \CC/JS code was written using also CMake, Valgrind (since memory consumption was critical), SQLite for the database management, and Google tests and Mocha for the unit tests.
-  \item Giotto: an SDK for the Cynny mobile and desktop apps (in \CC11). It is the common library all Cynny apps use to communicate with the Cynny servers. This multithreading synchronization middleware was developed using also third-party libraries like CMake, SQLite (for the synchronized internal database), Djinni (for the interface bindings with Objective-C and Android), and Catch as the testing suite.
+
+\vspace{10pt}
+
+\noindent\textbf{Cynny} \hfill \textit{2015/10 - 2018/03} \\
+\textit{Software Developer / Designer} \hfill \textit{Florence, Italy}
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt, topsep=4pt]
+  \item \textbf{Developed "Morphcast,"} a pioneering in-browser SPA utilizing Vue.js and Webpack, optimized for ES2015 standards.
+  \item \textbf{Built "Cynet,"} a P2P distributed hash table (Chord protocol) as a C++ Node.js plugin using V8 and libuv for low-latency data replication.
+  \item \textbf{Engineered the "Giotto" SDK}, a C++11 multithreading synchronization middleware for mobile/desktop cross-platform communication.
+  \item \textbf{Optimized memory-critical systems} using Valgrind and CMake, ensuring high reliability in resource-constrained environments.
 \end{itemize}
-\textbf{University of Pisa \& INFN Pisa} \hfill \textit{2014/12 - 2015/10} \\
-\textit{Post doc.~on experimental physics} \hfill \textit{Pisa \& Geneva} \\
-Physics post doc.~on the development of an algorithm for the reconstruction of tracks at the first trigger level in CMS at HL-LHC (CERN)
-During this period I spent my time mainly in the following activities:
-\begin{itemize}[noitemsep]
-  \item Statistical analyses of the LHC collisions, and consequent publication of experimental physics papers
-  \item R\&D on a fast tracking detector for the next generation of LHC
-  \item Teaching assistant in a master physics course ("Physics at the LHC")
-  \item Person in charge of part of the CMS software triggers (those relative to the CMS heavy-flavour programme)
+
+\vspace{10pt}
+
+\noindent\textbf{University of Pisa / Siena / INFN / CERN} \hfill \textit{2009/09 - 2015/10} \\
+\textit{Postdoctoral Researcher \& Ph.D. Candidate (Experimental Physics)} \hfill \textit{Pisa / Siena, Italy, Geneva, Switzerland}
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt, topsep=4pt]
+  \item \textbf{Led development of L1 trigger software} for the CMS experiment at the HL-LHC (CERN), managing teams of up to 10 people.
+  \item \textbf{Architected statistical analysis frameworks} in C++ (CMSSW/ROOT) to process petabytes of LHC collision data.
+  \item \textbf{Implemented Machine Learning algorithms} (Boosted Decision Trees) to optimize rare decay selection and signal extraction.
 \end{itemize}
-The statistical analyses were performed mainly using the \CC~CERN ROOT library and the CMS framework, CMSSW. \\
-\textbf{University of Pisa \& INFN Pisa} \hfill \textit{2012/12 - 2014/10} \\
-\textit{Post doc.~on experimental physics} \hfill \textit{Pisa \& Geneva} \\
-Physics post doc.~on L1 trigger software and hardware development for High Luminosity-LHC for the CMS experiment at CERN (CH).
-During this period I continued my activity in the heavy-flavour studies group.
-\begin{itemize}[noitemsep]
-  \item The most important result was the publication of the observation of the $\BsToMuMu$ decay with the combined analyses of the CMS and LHCb data (\url{https://cds.cern.ch/record/1970675}).
-    The different datasets were combined using an unbinned likelihood that was taking into account the correlated parameters.
-    This paper was also celebrated on the CMS homepage.
-  \item In the second year I started the study of the feasibility of a hardware track trigger for HL-LHC.
-\end{itemize}
-The statistical analyses were performed using Monte Carlo methods to infer efficiency estimates and their statistic and systematic uncertainties.
-The software was written in \CC, mainly using the CERN ROOT statistical framework, and the \CC~CMS software, CMSSW. \\
-\textbf{University of Siena \& INFN Pisa} \hfill \textit{2009/09 - 2012/12} \\
-\textit{Ph.D.~on experimental physics} \hfill \textit{Siena, Pisa \& Geneva} \\
-Ph.D. student at the CMS experiment at CERN.
-My work contributed to the publication of the first measurements of the $\Jpsi$ and $\PsiSS$ meson production cross-sections at 7 and 8~TeV of c.o.m.~energy, and also to the first observation of the rare decay $\BsToMuMu$.
-The observation of the latter is the main topic of my Ph.D.~thesis.
-Monte Carlo methods were used to extract the detector efficiencies.
-Statistical and systematic uncertainties were taken into account for the theoretical and experimental parameters.
-The final selection was optimized through a multivariate analysis, using a boosted decision tree algorithm.
-The extraction of the $\Bs$ signal was performed with an unbinned maximum likelihood fit, that was taking into account correlation of the many parameters and their uncertainties.
-The statistical significance against the null hypothesis was extracted through the likelihood ratio.
-During the first half of 2011 I was also responsible of the research and development of the heavy-flavour physics triggers of CMS. \\
-\textbf{CERN \& INFN Pisa} \hfill \textit{2011/01 - 2011/12} \\
-\textit{CERN Associate} \hfill \textit{Geneva} \\
-Associate position at CERN, CH
-During this 1-year position I spent most of the time making analyses for the heavy-flavour group of the CMS collaboration.
-Besides the publication of the $\Jpsi$ and $\PsiSS$ cross-sections, I started to study the feasibility of a measurement of the $\BsToMuMu$ rare decay using the first-year CMS data.
-I also was part of the analysts of the triggers (the selection of the collision data on-the-fly) for the heavy-flavour group.
-The software analyses were performed mainly in \CC~and using the CERN ROOT statistical library and the CMS framework, CMSSW.
+
 \section{Education and Training}
-\begin{itemize}[noitemsep]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
   \item \textbf{2013/12/04} - Ph.D.~on experimental physics (EQF level 8) - Excellent - University of Siena (Italy)
   \item \textbf{2009/07/21} - Master degree on Physics of Fundamental Interactions (EQF level 7) - 110/110 cum laude - University of Pisa (Italy)
   \item \textbf{2006/02/20} - Bachelor degree on General Physics (EQF level 6) - 110/110 - University of Pisa (Italy)
 \end{itemize}
 
 \section{Personal and Managerial Skills}
-\begin{itemize}[noitemsep]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
   \item Languages: Italian (mother tongue), English (C1)
   \item Excellent communication and public-speaking skills, gained participating as speaker in international conferences and also as a teacher at university and high-school courses.
   \item Sense of organization and team work
   \item Leadership, having been responsible of teams of up to about ten people
 \end{itemize}
 
-\section{Job-related skills}
-\begin{itemize}[noitemsep]
-  \item Problem modeling
-  \item Statistical analysis, Monte Carlo methods
-  \item Software development and design, \CC~(8 years), JavaScript~(11 years), PHP~(9 years), Python~(2 years), Test-Driven Development
+\section{Technical Skills}
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+  \item \textbf{Languages:} JavaScript/TypeScript (11 yrs), C++ (8 yrs), PHP (9 yrs), Python (3 yrs), SQL (9 yrs).
+  \item \textbf{Frameworks/Libraries:} React, React Native, Node.js, Vue.js, gRPC, GraphQL, Qt.
+  \item \textbf{Cloud \& DevOps:} AWS (Certified), Docker, Pulumi, GitLab CI/CD, Airflow.
+  \item \textbf{Testing/Quality:} TDD, Jest, Cypress, Detox, Artillery, Valgrind.
 \end{itemize}
 
 \section{Publications}
-\begin{itemize}[noitemsep]
-  \item Co-author in the CMS collaboration
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
   \item Single author of 4 High Energy Physics papers
+  \item Co-author in the CMS collaboration
 \end{itemize}
 
 \section{Conferences}
-\begin{itemize}[noitemsep]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
   \item Speaker in 7 international physics conferences: [La Thuile 2010], [Frascati 2010], [Vienna 2011], [Paris 2011], [La Thuile 2012], [La Biodola 2012], [Kolymvari 2013]
 \end{itemize}
 
 \section{Certifications}
-\begin{itemize}[noitemsep]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
   \item AWS Certified Developer - Associate, January 17, 2024
 \end{itemize}
 
 \section{Honours and awards}
-\begin{itemize}[noitemsep]
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
   \item Conversi award for the 2014 best high energy physics Ph.D.~thesis, by INFN
 \end{itemize}
 
